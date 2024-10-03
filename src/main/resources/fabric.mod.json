@@ -2,29 +2,34 @@
 	"schemaVersion": 1,
 	"id": "woodchip",
 	"version": "${version}",
+
 	"name": "Woodchip",
 	"description": "This is an example description! Tell everyone what your mod is about!",
+	"icon": "assets/woodchip/icon.png",
+	"contact": {
+		"homepage": "https://woodchip.trigam.dev",
+		"sources": "https://github.com/TrigamDev/Woodchip"
+	},
+	"license": "MIT",
+
 	"authors": [
 		"Trigam",
 		"SpookLass"
 	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+
+	"custom": {
+		"modmenu": {
+			"link": {
+				"modmenu.github_releases": "https://github.com/TrigamDev/Woodchip/releases"
+			}
+		}
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/woodchip/icon.png",
+
 	"environment": "*",
 	"entrypoints": {
-		"main": [
-			"dev.trigam.woodchip.Woodchip"
-		],
-		"client": [
-			"dev.trigam.woodchip.WoodchipClient"
-		],
-		"fabric-datagen": [
-			"dev.trigam.woodchip.WoodchipDataGenerator"
-		]
+		"main": [ "dev.trigam.woodchip.Woodchip" ],
+		"client": [ "dev.trigam.woodchip.WoodchipClient" ],
+		"fabric-datagen": [ "dev.trigam.woodchip.WoodchipDataGenerator" ]
 	},
 	"mixins": [
 		"woodchip.mixins.json",
@@ -38,8 +43,5 @@
 		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
