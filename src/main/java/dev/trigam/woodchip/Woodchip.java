@@ -1,5 +1,7 @@
 package dev.trigam.woodchip;
 
+import dev.trigam.woodchip.config.WoodchipConfig;
+import eu.midnightdust.lib.config.MidnightConfig;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.util.Identifier;
@@ -14,6 +16,6 @@ public class Woodchip implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		MidnightConfig.init(MOD_ID, WoodchipConfig.class);
 	}
 }
